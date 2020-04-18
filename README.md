@@ -1,6 +1,14 @@
 # Sensor Fusion Nanodegree ,Udacity, Project of Radar Target Generation and Detection
 
 ## Project Layout:
+### Radar design steps:
+* Configure the FMCW waveform based on the system requirements.
+* Define the range and velocity of target and simulate its displacement.
+* For the same simulation loop, check the transmit and receive signal to determine the beat signal.
+* Perfoem Range FFT on the recieved  signal to determione the range.
+* Perfoem 2nd FFT  to determione the doppler map.
+* perform cfar processing on output of 2nd FFT to determine the target.
+
 <img src="./ProjectRequirement.png" width="700" />
 
 
