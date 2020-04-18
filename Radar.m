@@ -14,8 +14,9 @@ clc;
 % *%TODO* :
 % define the target's initial position and velocity. Note : Velocity
 % remains contant
-r0=150; 
-v0= 50;
+r0=150; % Target Initial Range
+v0= 50; % Target Velocity
+
 
 %% FMCW Waveform Generation
 
