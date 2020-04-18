@@ -1,7 +1,7 @@
 # Sensor Fusion Nanodegree ,Udacity, Project of Radar Target Generation and Detection
 
 ## Project Layout:
-<img src="./ProjectLayout.JPG" width="700" />
+<img src="./ProjectRequirement.png" width="700" />
 
 
 ---
@@ -10,12 +10,6 @@
 * Max Range = 200m
 * Range Resolution = 1 m
 * Max Velocity = 100 m/s
-```
-Max_Range_of_Radar = 200; 
-Max_Velocity_of_Radar = 100;
-Range_Resolution_of_Radar = 1;
-speed_of_light = 3e8;
-```
 
 #### 2. User Defined Range and Velocity of target
 
@@ -32,16 +26,16 @@ v0= 50; % Target Velocity
 
 * Operating carrier frequency of Radar 
 ```
-c=3e8;
+fc= 77e9; %Operating carrier frequency of Radar             
+c=3e8;  %speed of electromagnetic wave
 Range_resolution=1;
 Max_velocity= 100;
 Max_range = 200;
 B=c/(2*Range_resolution);
 Tchirp = 5.5*2*Max_range/c;
 slope=B/Tchirp;
-fprintf('Bsweep = %.2f \t Tchirp = %f \t slope = %.2f\n', B, Tchirp, slope);%Operating carrier frequency of Radar 
-fc= 77e9;             %carrier freq
-FMCW
+fprintf('Bsweep = %.2f \t Tchirp = %f \t slope = %.2f\n', B, Tchirp, slope); 
+
 ```                                                          
 * The number of chirps in one sequence. 
 * Its ideal to have `2^value` for the ease of running the FFT for Doppler Estimation. 

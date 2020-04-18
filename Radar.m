@@ -24,15 +24,15 @@ v0= 50; % Target Velocity
 %Design the FMCW waveform by giving the specs of each of its parameters.
 % Calculate the Bandwidth (B), Chirp Time (Tchirp) and Slope (slope) of the FMCW
 % chirp using the requirements above.
-c=3e8;
+fc= 77e9; %Operating carrier frequency of Radar          
+c=3e8; %speed of electromagnetic wave
 Range_resolution=1;
 Max_velocity= 100;
 Max_range = 200;
 B=c/(2*Range_resolution);
 Tchirp = 5.5*2*Max_range/c;
 slope=B/Tchirp;
-fprintf('Bsweep = %.2f \t Tchirp = %f \t slope = %.2f\n', B, Tchirp, slope);%Operating carrier frequency of Radar 
-fc= 77e9;             %carrier freq
+fprintf('Bsweep = %.2f \t Tchirp = %f \t slope = %.2f\n', B, Tchirp, slope); 
 
                                                           
 %The number of chirps in one sequence. Its ideal to have 2^ value for the ease of running the FFT
