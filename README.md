@@ -145,8 +145,21 @@ zlabel('RDM')
 <img src="./fft2_radar.png" width="700" />
 
 #### 7. CFAR implementation
+* Select number of training cells for range and doppler axis
+* Select number of gaurd cells for range and doppler axis
+* Select the offset by signal to noise ratio in db
+* normalize the RDM
+* Create a vector to store noise_level for each iteration on training cells
+
+* Design a loop such that For every iteration sum the signal level within all the training
+* To sum convert the RDM value from logarithmic to linear using db2pow function and average the summed values for all of the training
+
+* After averaging convert RDM value back to logarithimic using pow2db.
+* Further add the offset to it to determine the threshold.
+* compare the signal under Cell Under Test with this threshold. If the CUT level > threshold assign it a value of 1, else equate it to 0
 * Slide Window through the complete Range Doppler Map
-* Select the number of Training Cells in both the dimensions.
+* As the CUT cannot be located at the edges of matrix,Hence,few cells will not be thresholded. To keep the map size same set those values to 0.
+* Display the CFAR output using the Surf function
 ```
 Tr = 8;
 Td = 10;
