@@ -9,7 +9,7 @@
 * Perfoem 2nd FFT  to determione the doppler map.
 * perform cfar processing on output of 2nd FFT to determine the target.
 
-<img src="./ProjectRequirement.png" width="700" />
+<img src="./Radar_design_steps.png" width="700" />
 
 
 ---
